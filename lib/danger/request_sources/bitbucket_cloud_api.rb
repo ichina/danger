@@ -47,7 +47,7 @@ module Danger
         uri = URI("#{pr_api_endpoint_v1}/comments")
         body = { 
           content: text,
-          filename: Platon2/Registration/services/session/SessionService.swift,
+          filename: "Platon2/Registration/services/session/SessionService.swift",
           line_to: "107"
                 }.to_json
         post(uri, body)
