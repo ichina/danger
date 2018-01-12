@@ -45,7 +45,11 @@ module Danger
 
       def post_comment(text)
         uri = URI("#{pr_api_endpoint_v1}/comments")
-        body = { content: text }.to_json
+        body = { 
+          content: text,
+          filename: Platon2/Registration/services/session/SessionService.swift,
+          line_to: "107"
+                }.to_json
         post(uri, body)
       end
 
