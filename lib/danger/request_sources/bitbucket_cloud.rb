@@ -67,8 +67,8 @@ module Danger
       def update_pull_request!(warnings: [], errors: [], messages: [], markdowns: [], danger_id: "danger", new_comment: false)
         delete_old_comments(danger_id: danger_id) unless new_comment
 
-        comment = generate_description(warnings: warnings, errors: errors)
-        comment += "\n\n"
+        #comment = generate_description(warnings: warnings, errors: errors)
+        #comment += "\n\n"
         comment += generate_comment(warnings: warnings,
                                      errors: errors,
                                    messages: messages,
@@ -77,7 +77,7 @@ module Danger
                                   danger_id: danger_id,
                                    template: "bitbucket_server")
 
-        @api.post_comment(comment)
+        @api.post_comment(comment, "Platon2/Registration/services/session/SessionService.swift", "112")
       end
 
       def delete_old_comments(danger_id: "danger")

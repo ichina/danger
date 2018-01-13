@@ -43,12 +43,13 @@ module Danger
         delete(uri)
       end
 
-      def post_comment(text)
+      def post_comment(text, filename, line_to)
         uri = URI("#{pr_api_endpoint_v1}/comments")
         body = { 
           content: text,
-          filename: "Platon2/Registration/services/session/SessionService.swift",
-          line_to: "107"
+          filename: filename,
+          line_to: line_to,
+          is_spam: false
                 }.to_json
         post(uri, body)
       end
