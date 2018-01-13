@@ -69,7 +69,7 @@ module Danger
 
         #comment = generate_description(warnings: warnings, errors: errors)
         #comment += "\n\n"
-        comment += generate_comment(warnings: warnings,
+        comment = generate_comment(warnings: warnings,
                                      errors: errors,
                                    messages: messages,
                                   markdowns: markdowns,
